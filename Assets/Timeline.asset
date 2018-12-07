@@ -18,33 +18,39 @@ MonoBehaviour:
     actor3InLight: 0
     actor4InLight: 0
     decor: 1
+    music: 0
+  - duration: 5
+    actor1InLight: 0
+    actor2InLight: 1
+    actor3InLight: 0
+    actor4InLight: 0
+    decor: 1
+    music: 3
   - duration: 5
     actor1InLight: 1
     actor2InLight: 0
     actor3InLight: 0
     actor4InLight: 0
     decor: 4
+    music: 0
   - duration: 5
     actor1InLight: 1
     actor2InLight: 0
     actor3InLight: 0
     actor4InLight: 0
     decor: 4
+    music: 0
   - duration: 5
     actor1InLight: 1
     actor2InLight: 0
     actor3InLight: 0
     actor4InLight: 0
     decor: 4
+    music: 0
   - duration: 5
     actor1InLight: 1
     actor2InLight: 0
     actor3InLight: 0
     actor4InLight: 0
     decor: 4
-  - duration: 5
-    actor1InLight: 1
-    actor2InLight: 0
-    actor3InLight: 0
-    actor4InLight: 0
-    decor: 4
+    music: 0

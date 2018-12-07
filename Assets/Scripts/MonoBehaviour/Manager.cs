@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour {
 
@@ -29,6 +30,8 @@ public class Manager : MonoBehaviour {
 	public AudioClip clip3;
 
 	int audioIndex;
+
+	int actorInLight;
 
 
 	Vector3 targetLightPos;
@@ -138,14 +141,17 @@ public class Manager : MonoBehaviour {
 		
 		if(Input.GetKeyDown(KeyCode.Keypad7)){
 			targetLightPos = a1.transform.position;
+			actorInLight = 1;
 		}
 
 		if(Input.GetKeyDown(KeyCode.Keypad8)){
 			targetLightPos = a2.transform.position;
+			actorInLight = 2;
 		}
 
 		if(Input.GetKeyDown(KeyCode.Keypad9)){
 			targetLightPos = a3.transform.position;
+			actorInLight = 3;
 		}
 
 		Quaternion tRot = Quaternion.LookRotation(targetLightPos - sLight.transform.position);
@@ -156,16 +162,32 @@ public class Manager : MonoBehaviour {
 
 		
 		textCrowd.text = ((int)crowd.Happiness).ToString();
+
+
+		if(crowd.Happiness <= 0){
+			Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
+		}
 	}
 
 
 
 	void GetActualState(){
 
-		actualState.actor1InLight = a1.actived;
-		actualState.actor2InLight = a2.actived;
-		actualState.actor3InLight = a3.actived;
-		actualState.decor = decor;
+		actualState.actor1InLight = false;
+		actualState.actor2InLight = false;
+		actualState.actor3InLight = false;
+
+		if(actorInLight == 1)
+			actualState.actor1InLight = true;
+
+		if(actorInLight == 2)
+			actualState.actor2InLight = true;
+		
+		if(actorInLight == 3)
+			actualState.actor3InLight = true;
+
+		actualState.decor = (DecorEnum)decor;
+		actualState.music = (Sounds)audioIndex;
 
 	}
 

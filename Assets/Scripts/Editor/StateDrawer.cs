@@ -42,6 +42,10 @@ public class StateDrawer : PropertyDrawer {
 
 		EditorGUIUtility.labelWidth = 90f;
 		EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative("decor"), new GUIContent("Decor"));
+
+		contentPosition.y += 16f;
+		EditorGUIUtility.labelWidth = 90f;
+		EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative("music"), new GUIContent("Music"));
 		
 	
 
@@ -53,7 +57,7 @@ public class StateDrawer : PropertyDrawer {
 
 
 	public override float GetPropertyHeight (SerializedProperty property, GUIContent label) {
-		return 3 * 16f;
+		return 4 * 16f;
 	}
 
 
