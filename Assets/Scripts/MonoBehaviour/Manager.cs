@@ -6,9 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour {
 
-	public Text textCrowd;
 	public TimeLine timeline;
-	GameState actualState;
+	public GameState actualState;
 
 	public GameObject sLight;
 
@@ -34,6 +33,10 @@ public class Manager : MonoBehaviour {
 	int actorInLight;
 
 
+	public float timer;
+	float timerOffset;
+
+
 	Vector3 targetLightPos;
 
 	AudioSource src;
@@ -48,11 +51,15 @@ public class Manager : MonoBehaviour {
 
 
 	private void Update() {
+
+		timer += Time.deltaTime;
+		
 		GetActualState();
 
-		if(timeline.GetCurrentState().Compare(actualState)){
+		if(timeline.GetCurrentState().CompareAll(actualState)){
 			crowd.Happiness += happinessChange * Time.deltaTime;
 		}
+
 		else{
 			crowd.Happiness -= happinessChange * Time.deltaTime;
 		}
@@ -68,8 +75,6 @@ public class Manager : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.Keypad3)){
 			decor = (DecorEnum)3;
 		}
-
-
 
 
 
@@ -157,21 +162,21 @@ public class Manager : MonoBehaviour {
 		Quaternion tRot = Quaternion.LookRotation(targetLightPos - sLight.transform.position);
 
 		sLight.transform.rotation = Quaternion.RotateTowards(sLight.transform.rotation,tRot,Time.deltaTime * 30f);
-		
-		
-
-		
-		textCrowd.text = ((int)crowd.Happiness).ToString();
+	
 
 
 		if(crowd.Happiness <= 0){
-			Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
+
+			Scene scene = SceneManager.GetActiveScene(); 
+			SceneManager.LoadScene(scene.name);
+			timeline.Reset();
+
 		}
 	}
 
 
 
-	void GetActualState(){
+	public void GetActualState(){
 
 		actualState.actor1InLight = false;
 		actualState.actor2InLight = false;

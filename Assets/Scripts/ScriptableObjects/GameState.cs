@@ -15,11 +15,33 @@ public struct GameState{
 	public Sounds music;
 
 
-	public bool Compare(GameState other){
-		if(other.actor1InLight == actor1InLight && other.actor2InLight == actor2InLight && other.actor3InLight == actor3InLight  && other.actor4InLight == actor4InLight && decor == other.decor && music == other.music){
+	public bool CompareAll(GameState other){
+		if(CompareActors(other) && CompareDecor(other) && CompareMusic(other)){
 			return true;
 		}
 		return false;
 	}
+
+	public bool CompareActors(GameState other){
+		if(other.actor1InLight == actor1InLight && other.actor2InLight == actor2InLight && other.actor3InLight == actor3InLight){
+			return true;
+		}
+		return false;
+	}
+
+	public bool CompareDecor(GameState other){
+		if(decor == other.decor){
+			return true;
+		}
+		return false;
+	}
+
+	public bool CompareMusic(GameState other){
+		if(music == other.music){
+			return true;
+		}
+		return false;
+	}
+
 
 }
