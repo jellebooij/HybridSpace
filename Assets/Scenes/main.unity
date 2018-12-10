@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -216,7 +216,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d90f4ef4f4fdaa46928a965d748ef4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  t: {fileID: 1354485244}
 --- !u!4 &53688224
 Transform:
   m_ObjectHideFlags: 0
@@ -2725,8 +2724,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb4e47ca6bdbed4784fc8235b1f9de8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textCrowd: {fileID: 667456663}
-  timeline: {fileID: 11400000, guid: 3138226505c1fc64fabcc2ac72535b8a, type: 2}
+  timeline: {fileID: 11400000, guid: b539ce0f8a83f414e937481ec6ee423c, type: 2}
+  actualState:
+    duration: 0
+    actor1InLight: 0
+    actor2InLight: 0
+    actor3InLight: 0
+    actor4InLight: 0
+    decor: 0
+    music: 0
   sLight: {fileID: 227152486}
   crowd: {fileID: 11400000, guid: 7bdf07db455182e45812e06415e5ba6b, type: 2}
   decorobject: {fileID: 398324240}
@@ -2762,7 +2768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e566ae196801d44b8a682d1a934a11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  line: {fileID: 11400000, guid: 3138226505c1fc64fabcc2ac72535b8a, type: 2}
+  line: {fileID: 11400000, guid: b539ce0f8a83f414e937481ec6ee423c, type: 2}
 --- !u!82 &1130190414
 AudioSource:
   m_ObjectHideFlags: 0
