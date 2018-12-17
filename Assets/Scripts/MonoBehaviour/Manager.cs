@@ -42,6 +42,9 @@ public class Manager : MonoBehaviour {
 	AudioSource src;
 
 
+	public Transform[] positions; 
+
+
 
 	private void Start() {
 		crowd.Happiness = 50;
@@ -135,11 +138,6 @@ public class Manager : MonoBehaviour {
 
 			}
 
-
-
-
-
-
 		}		
 		
 		
@@ -164,6 +162,11 @@ public class Manager : MonoBehaviour {
 		sLight.transform.rotation = Quaternion.RotateTowards(sLight.transform.rotation,tRot,Time.deltaTime * 30f);
 	
 
+		GameState s = timeline.GetCurrentState();
+
+		a1.targetLocation = new Vector2(positions[(int)s.actor1Position].position.x, positions[(int)s.actor1Position].position.z);
+		a2.targetLocation = new Vector2(positions[(int)s.actor2Position].position.x, positions[(int)s.actor2Position].position.z);
+		a3.targetLocation = new Vector2(positions[(int)s.actor3Position].position.x, positions[(int)s.actor3Position].position.z);
 
 		if(crowd.Happiness <= 0){
 

@@ -14,6 +14,10 @@ public struct GameState{
 	public DecorEnum decor;
 	public Sounds music;
 
+	public positionEnum actor1Position;
+	public positionEnum actor2Position;
+	public positionEnum actor3Position;
+
 
 	public bool CompareAll(GameState other){
 		if(CompareActors(other) && CompareDecor(other) && CompareMusic(other)){
@@ -45,3 +49,5 @@ public struct GameState{
 
 
 }
+
+public enum positionEnum { position1, position2, postion3, position4 }

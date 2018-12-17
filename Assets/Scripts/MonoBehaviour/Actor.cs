@@ -15,8 +15,13 @@ public class Actor : MonoBehaviour {
 
 	MeshRenderer rend;
 
+	public Vector2 targetLocation;
+
 	private void Start() {
+
 		rend = GetComponent<MeshRenderer>();
+		targetLocation = new Vector3(transform.position.x,transform.position.z);
+		
 	}
 	private void Update() {
 		if(actived){
@@ -25,6 +30,9 @@ public class Actor : MonoBehaviour {
 		else{
 			rend.material = deactivatedMat;
 		}
+
+		transform.position = Vector3.MoveTowards(transform.position,new Vector3(targetLocation.x,transform.position.y,targetLocation.y) , 2 * Time.deltaTime);
+
 	}
 
 }
