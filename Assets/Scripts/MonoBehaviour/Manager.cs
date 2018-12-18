@@ -143,17 +143,17 @@ public class Manager : MonoBehaviour {
 		
 		
 		if(Input.GetKeyDown(KeyCode.Keypad7)){
-			targetLightPos = a1.transform.position;
+			targetLightPos = positions[0].position;
 			actorInLight = 1;
 		}
 
 		if(Input.GetKeyDown(KeyCode.Keypad8)){
-			targetLightPos = a2.transform.position;
+			targetLightPos = positions[1].position;
 			actorInLight = 2;
 		}
 
 		if(Input.GetKeyDown(KeyCode.Keypad9)){
-			targetLightPos = a3.transform.position;
+			targetLightPos = positions[2].position;
 			actorInLight = 3;
 		}
 
