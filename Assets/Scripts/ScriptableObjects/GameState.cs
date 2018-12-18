@@ -50,4 +50,4 @@ public struct GameState{
 
 }
 
-public enum positionEnum { position1, position2, postion3, position4 }
+public enum positionEnum { position1, position2, postion3 }

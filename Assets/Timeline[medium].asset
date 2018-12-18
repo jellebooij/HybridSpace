@@ -31,7 +31,7 @@ MonoBehaviour:
     music: 0
     actor1Position: 1
     actor2Position: 1
-    actor3Position: 3
+    actor3Position: 2
   - duration: 5
     actor1InLight: 1
     actor2InLight: 0
