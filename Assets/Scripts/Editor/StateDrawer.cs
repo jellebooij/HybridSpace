@@ -7,6 +7,7 @@ using UnityEditor;
 public class StateDrawer : PropertyDrawer {
 
 	public override void OnGUI (Rect position, SerializedProperty property, GUIContent label) {
+		
 		label = EditorGUI.BeginProperty(position, label, property);
 		Rect contentPosition = position;
 		EditorGUI.indentLevel = 0;
@@ -44,8 +45,18 @@ public class StateDrawer : PropertyDrawer {
 		EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative("decor"), new GUIContent("Decor"));
 
 		contentPosition.y += 16f;
-		EditorGUIUtility.labelWidth = 90f;
 		EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative("music"), new GUIContent("Music"));
+
+
+
+		contentPosition.y += 16f;
+		EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative("actor1Position"), new GUIContent("p1"));
+		
+		contentPosition.y += 16f;
+		EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative("actor2Position"), new GUIContent("p2"));
+
+		contentPosition.y += 16f;
+		EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative("actor3Position"), new GUIContent("p3"));
 		
 	
 
@@ -57,7 +68,7 @@ public class StateDrawer : PropertyDrawer {
 
 
 	public override float GetPropertyHeight (SerializedProperty property, GUIContent label) {
-		return 4 * 16f;
+		return 7 * 16f;
 	}
 
 
