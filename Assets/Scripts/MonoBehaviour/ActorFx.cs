@@ -35,12 +35,5 @@ public class ActorFx : MonoBehaviour {
 			Actor3fx.emissionRate = 0;
 		}
 
-		if(t.GetCurrentState().actor4InLight){
-			Actor4fx.emissionRate = 50;
-		}
-		else{
-			Actor4fx.emissionRate = 0;
-		}
-
 	}
 }

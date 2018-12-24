@@ -19,13 +19,13 @@ public class StateDrawer : PropertyDrawer {
 
 		contentPosition.y += 16f;
 
-		EditorGUI.LabelField(contentPosition,"Actors");
+		EditorGUI.LabelField(contentPosition,"LightPos");
 		contentPosition.x += 90f;
 		contentPosition.width -= 90f;
 		
 		
 		EditorGUIUtility.labelWidth = 14f;	
-		contentPosition.width *= 0.25f;	
+		contentPosition.width *= 0.33333f;	
 
 
 		EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative("actor1InLight"), (Screen.width < 500f) ? GUIContent.none : new GUIContent("1"));
@@ -33,8 +33,8 @@ public class StateDrawer : PropertyDrawer {
 		EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative("actor2InLight"), (Screen.width < 500f) ? GUIContent.none : new GUIContent("2"));
 		contentPosition.x += contentPosition.width;
 		EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative("actor3InLight"), (Screen.width < 500f) ? GUIContent.none : new GUIContent("3"));
-		contentPosition.x += contentPosition.width;
-		EditorGUI.PropertyField(contentPosition, property.FindPropertyRelative("actor4InLight"), (Screen.width < 500f) ? GUIContent.none : new GUIContent("4"));
+
+
 		
 
 		contentPosition = position;
@@ -68,7 +68,7 @@ public class StateDrawer : PropertyDrawer {
 
 
 	public override float GetPropertyHeight (SerializedProperty property, GUIContent label) {
-		return 7 * 16f;
+		return 8 * 16f;
 	}
 
 
