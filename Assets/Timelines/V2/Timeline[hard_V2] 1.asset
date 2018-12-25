@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74ccdaee62f31d548a99b01fc6d82555, type: 3}
+  m_Name: Timeline[hard_V2] 1
+  m_EditorClassIdentifier: 
+  states:
+  - duration: 15
+    actor1InLight: 0
+    actor2InLight: 0
+    actor3InLight: 1
+    actor4InLight: 0
+    decor: 2
+    music: 0
+    actor1Position: 0
+    actor2Position: 1
+    actor3Position: 2
+  - duration: 10
+    actor1InLight: 0
+    actor2InLight: 1
+    actor3InLight: 0
+    actor4InLight: 0
+    decor: 3
+    music: 1
+    actor1Position: 0
+    actor2Position: 1
+    actor3Position: 2
+  - duration: 5
+    actor1InLight: 0
+    actor2InLight: 1
+    actor3InLight: 0
+    actor4InLight: 0
+    decor: 0
+    music: 0
+    actor1Position: 0
+    actor2Position: 1
+    actor3Position: 2
+  - duration: 10
+    actor1InLight: 1
+    actor2InLight: 0
+    actor3InLight: 0
+    actor4InLight: 0
+    decor: 1
+    music: 3
+    actor1Position: 0
+    actor2Position: 1
+    actor3Position: 2
+  - duration: 5
+    actor1InLight: 0
+    actor2InLight: 1
+    actor3InLight: 0
+    actor4InLight: 0
+    decor: 3
+    music: 1
+    actor1Position: 0
+    actor2Position: 1
+    actor3Position: 2
+  - duration: 10
+    actor1InLight: 0
+    actor2InLight: 0
+    actor3InLight: 1
+    actor4InLight: 0
+    decor: 2
+    music: 2
+    actor1Position: 0
+    actor2Position: 1
+    actor3Position: 2
+  - duration: 5
+    actor1InLight: 1
+    actor2InLight: 0
+    actor3InLight: 0
+    actor4InLight: 0
+    decor: 1
+    music: 1
+    actor1Position: 0
+    actor2Position: 1
+    actor3Position: 2
+  - duration: 10
+    actor1InLight: 0
+    actor2InLight: 1
+    actor3InLight: 0
+    actor4InLight: 0
+    decor: 3
+    music: 1
+    actor1Position: 0
+    actor2Position: 1
+    actor3Position: 2
+  - duration: 10
+    actor1InLight: 0
+    actor2InLight: 0
+    actor3InLight: 1
+    actor4InLight: 0
+    decor: 1
+    music: 3
+    actor1Position: 0
+    actor2Position: 1
+    actor3Position: 2
+  - duration: 5
+    actor1InLight: 0
+    actor2InLight: 1
+    actor3InLight: 0
+    actor4InLight: 0
+    decor: 0
+    music: 1
+    actor1Position: 0
+    actor2Position: 1
+    actor3Position: 2
+  - duration: 5
+    actor1InLight: 0
+    actor2InLight: 1
+    actor3InLight: 0
+    actor4InLight: 0
+    decor: 0
+    music: 0
+    actor1Position: 0
+    actor2Position: 1
+    actor3Position: 2
