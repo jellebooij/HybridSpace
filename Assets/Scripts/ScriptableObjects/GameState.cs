@@ -10,7 +10,7 @@ public struct GameState{
 	public bool actor1InLight;
 	public bool actor2InLight;
 	public bool actor3InLight;
-	public bool actor4InLight;
+
 	public DecorEnum decor;
 	public Sounds music;
 
@@ -50,4 +50,4 @@ public struct GameState{
 
 }
 
-public enum positionEnum { position1, position2, postion3 }
+public enum positionEnum { position1, position2, postion3, offstage }
