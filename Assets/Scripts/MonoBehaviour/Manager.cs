@@ -8,7 +8,7 @@ public class Manager : MonoBehaviour {
 
 	public TimeLine timeline;
 
-	[HideInInspector]
+	//[HideInInspector]
 	public GameState actualState;
 
 	[HideInInspector]
@@ -58,6 +58,7 @@ public class Manager : MonoBehaviour {
 		timer = currentState.duration;
 		decor = DecorEnum.decor1;
 		crowd.Happiness = 100;
+		actorInLight = 2;
 	
 
 	}
@@ -70,15 +71,15 @@ public class Manager : MonoBehaviour {
 	
 
 		if(Input.GetKeyDown(KeyCode.Keypad1)){
-			decor = (DecorEnum)1;
+			decor = (DecorEnum)0;
 		}
 
 		if(Input.GetKeyDown(KeyCode.Keypad2)){
-			decor = (DecorEnum)2;
+			decor = (DecorEnum)1;
 		}
 
 		if(Input.GetKeyDown(KeyCode.Keypad3)){
-			decor = (DecorEnum)3;
+			decor = (DecorEnum)2;
 		}
 
 
@@ -89,13 +90,13 @@ public class Manager : MonoBehaviour {
 
 
 
-		if(decor == (DecorEnum)1){
+		if(decor == (DecorEnum)0){
 			decorobject.decor1.SetActive(true);
 		}
-		if(decor == (DecorEnum)2){
+		if(decor == (DecorEnum)1){
 			decorobject.decor2.SetActive(true);
 		}
-		if(decor == (DecorEnum)3){
+		if(decor == (DecorEnum)2){
 			decorobject.decor3.SetActive(true);
 		}
 
@@ -160,14 +161,16 @@ public class Manager : MonoBehaviour {
 
 		sLight.transform.rotation = Quaternion.RotateTowards(sLight.transform.rotation,tRot,Time.deltaTime * 30f);
 
+		bool isCorrect = timeline.GetCurrentState().CompareAll(actualState);
+
 		if(timeline.UpdateTimeline()) 
 		{
-			if(!timeline.GetCurrentState().CompareAll(actualState))
-			{	
+			if(!isCorrect)
 				crowd.Happiness -= 33.33333f;
+
+
 				currentState = timeline.GetCurrentState();
 				timer = currentState.duration;
-			}
 		}
 
 		a1.targetLocation = new Vector2(positions[(int)currentState.actor1Position].position.x, positions[(int)currentState.actor1Position].position.z);
