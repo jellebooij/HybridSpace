@@ -1,0 +1,366 @@
+fileFormatVersion: 2
+guid: 0358869b6483559498852fdd7aaa0553
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: balk22
+    100002: Chair
+    100004: Chair1
+    100006: Chair2
+    100008: Chair3
+    100010: Chair4
+    100012: Chair5
+    100014: Chair7
+    100016: CombinedChairs
+    100018: lamp_links1
+    100020: lamp_links2
+    100022: lamp_recht1
+    100024: lamp_rechts2
+    100026: LefttRowChairs
+    100028: MiddleRow2
+    100030: MiddleRow5
+    100032: MiddleRow6
+    100034: MiddleRow8
+    100036: MiddleRow9
+    100038: MiddleRow_1
+    100040: MiddleRow_1 1
+    100042: MiddleRow_1 2
+    100044: MiddleRow_2
+    100046: MiddleRow_2 1
+    100048: MiddleRow_2 2
+    100050: MiddleRow_3
+    100052: MiddleRow_3 1
+    100054: MiddleRow_3 2
+    100056: MiddleRow_4
+    100058: MiddleRow_4 1
+    100060: MiddleRow_4 2
+    100062: MiddleRow_4 3
+    100064: MiddleRow_5
+    100066: MiddleRow_5 1
+    100068: MiddleRow_5 2
+    100070: MiddleRow_6
+    100072: MiddleRow_6 1
+    100074: MiddleRow_6 2
+    100076: MiddleRow_7
+    100078: MiddleRow_7 1
+    100080: MiddleRow_7 2
+    100082: MiddleRow_8
+    100084: MiddleRow_8 1
+    100086: MiddleRow_8 2
+    100088: MiddleRowChairs
+    100090: ONE_PART
+    100092: OneChair
+    100094: OneChair2SIDELSSS
+    100096: OneChair2SIDELSSS1
+    100098: OneChair2SIDELSSS2
+    100100: OneChair2SIDELSSS3
+    100102: OneChair2SIDELSSS4
+    100104: OneChair2SIDELSSS5
+    100106: pCylinder1
+    100108: pCylinder2
+    100110: pCylinder4
+    100112: RightRowChairs
+    100114: Stairs
+    100116: Stairs1
+    100118: //RootNode
+    100120: transform1
+    100122: transform10
+    100124: transform11
+    100126: transform12
+    100128: transform13
+    100130: transform14
+    100132: transform15
+    100134: transform16
+    100136: transform17
+    100138: transform18
+    100140: transform19
+    100142: transform2
+    100144: transform20
+    100146: transform21
+    100148: transform22
+    100150: transform3
+    100152: transform4
+    100154: transform5
+    100156: transform6
+    100158: transform7
+    100160: transform8
+    100162: transform9
+    100164: Walls_Floor
+    400000: balk22
+    400002: Chair
+    400004: Chair1
+    400006: Chair2
+    400008: Chair3
+    400010: Chair4
+    400012: Chair5
+    400014: Chair7
+    400016: CombinedChairs
+    400018: lamp_links1
+    400020: lamp_links2
+    400022: lamp_recht1
+    400024: lamp_rechts2
+    400026: LefttRowChairs
+    400028: MiddleRow2
+    400030: MiddleRow5
+    400032: MiddleRow6
+    400034: MiddleRow8
+    400036: MiddleRow9
+    400038: MiddleRow_1
+    400040: MiddleRow_1 1
+    400042: MiddleRow_1 2
+    400044: MiddleRow_2
+    400046: MiddleRow_2 1
+    400048: MiddleRow_2 2
+    400050: MiddleRow_3
+    400052: MiddleRow_3 1
+    400054: MiddleRow_3 2
+    400056: MiddleRow_4
+    400058: MiddleRow_4 1
+    400060: MiddleRow_4 2
+    400062: MiddleRow_4 3
+    400064: MiddleRow_5
+    400066: MiddleRow_5 1
+    400068: MiddleRow_5 2
+    400070: MiddleRow_6
+    400072: MiddleRow_6 1
+    400074: MiddleRow_6 2
+    400076: MiddleRow_7
+    400078: MiddleRow_7 1
+    400080: MiddleRow_7 2
+    400082: MiddleRow_8
+    400084: MiddleRow_8 1
+    400086: MiddleRow_8 2
+    400088: MiddleRowChairs
+    400090: ONE_PART
+    400092: OneChair
+    400094: OneChair2SIDELSSS
+    400096: OneChair2SIDELSSS1
+    400098: OneChair2SIDELSSS2
+    400100: OneChair2SIDELSSS3
+    400102: OneChair2SIDELSSS4
+    400104: OneChair2SIDELSSS5
+    400106: pCylinder1
+    400108: pCylinder2
+    400110: pCylinder4
+    400112: RightRowChairs
+    400114: Stairs
+    400116: Stairs1
+    400118: //RootNode
+    400120: transform1
+    400122: transform10
+    400124: transform11
+    400126: transform12
+    400128: transform13
+    400130: transform14
+    400132: transform15
+    400134: transform16
+    400136: transform17
+    400138: transform18
+    400140: transform19
+    400142: transform2
+    400144: transform20
+    400146: transform21
+    400148: transform22
+    400150: transform3
+    400152: transform4
+    400154: transform5
+    400156: transform6
+    400158: transform7
+    400160: transform8
+    400162: transform9
+    400164: Walls_Floor
+    2100000: lambert4
+    2100002: Lambert3
+    2100004: lambert1
+    2100006: phong1
+    2300000: balk22
+    2300002: lamp_links1
+    2300004: lamp_links2
+    2300006: lamp_recht1
+    2300008: lamp_rechts2
+    2300010: MiddleRow_1
+    2300012: MiddleRow_1 1
+    2300014: MiddleRow_1 2
+    2300016: MiddleRow_2
+    2300018: MiddleRow_2 1
+    2300020: MiddleRow_2 2
+    2300022: MiddleRow_3
+    2300024: MiddleRow_3 1
+    2300026: MiddleRow_3 2
+    2300028: MiddleRow_4 1
+    2300030: MiddleRow_4 2
+    2300032: MiddleRow_4 3
+    2300034: MiddleRow_5
+    2300036: MiddleRow_5 1
+    2300038: MiddleRow_5 2
+    2300040: MiddleRow_6
+    2300042: MiddleRow_6 1
+    2300044: MiddleRow_6 2
+    2300046: MiddleRow_7
+    2300048: MiddleRow_7 1
+    2300050: MiddleRow_7 2
+    2300052: MiddleRow_8
+    2300054: MiddleRow_8 1
+    2300056: MiddleRow_8 2
+    2300058: pCylinder1
+    2300060: pCylinder2
+    2300062: pCylinder4
+    2300064: Stairs
+    2300066: Stairs1
+    2300068: Walls_Floor
+    3300000: balk22
+    3300002: lamp_links1
+    3300004: lamp_links2
+    3300006: lamp_recht1
+    3300008: lamp_rechts2
+    3300010: MiddleRow_1
+    3300012: MiddleRow_1 1
+    3300014: MiddleRow_1 2
+    3300016: MiddleRow_2
+    3300018: MiddleRow_2 1
+    3300020: MiddleRow_2 2
+    3300022: MiddleRow_3
+    3300024: MiddleRow_3 1
+    3300026: MiddleRow_3 2
+    3300028: MiddleRow_4 1
+    3300030: MiddleRow_4 2
+    3300032: MiddleRow_4 3
+    3300034: MiddleRow_5
+    3300036: MiddleRow_5 1
+    3300038: MiddleRow_5 2
+    3300040: MiddleRow_6
+    3300042: MiddleRow_6 1
+    3300044: MiddleRow_6 2
+    3300046: MiddleRow_7
+    3300048: MiddleRow_7 1
+    3300050: MiddleRow_7 2
+    3300052: MiddleRow_8
+    3300054: MiddleRow_8 1
+    3300056: MiddleRow_8 2
+    3300058: pCylinder1
+    3300060: pCylinder2
+    3300062: pCylinder4
+    3300064: Stairs
+    3300066: Stairs1
+    3300068: Walls_Floor
+    4300000: Walls_Floor
+    4300002: MiddleRow_1
+    4300004: MiddleRow_2
+    4300006: MiddleRow_3
+    4300008: MiddleRow_4
+    4300010: MiddleRow_5
+    4300012: MiddleRow_6
+    4300014: MiddleRow_7
+    4300016: MiddleRow_8
+    4300018: MiddleRow_1
+    4300020: MiddleRow_2
+    4300022: MiddleRow_3
+    4300024: MiddleRow_4
+    4300026: MiddleRow_5
+    4300028: MiddleRow_6
+    4300030: MiddleRow_7
+    4300032: MiddleRow_8
+    4300034: MiddleRow_1
+    4300036: MiddleRow_2
+    4300038: MiddleRow_3
+    4300040: MiddleRow_4
+    4300042: MiddleRow_5
+    4300044: MiddleRow_6
+    4300046: MiddleRow_7
+    4300048: MiddleRow_8
+    4300050: Stairs
+    4300052: balk22
+    4300054: pCylinder4
+    4300056: pCylinder2
+    4300058: pCylinder1
+    4300060: lamp_rechts2
+    4300062: lamp_recht1
+    4300064: lamp_links1
+    4300066: lamp_links2
+    4300068: Stairs1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

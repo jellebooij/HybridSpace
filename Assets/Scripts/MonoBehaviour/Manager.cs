@@ -7,15 +7,18 @@ using UnityEngine.SceneManagement;
 public class Manager : MonoBehaviour {
 
 	public TimeLine timeline;
+
+	[HideInInspector]
 	public GameState actualState;
+
+	[HideInInspector]
+	public GameState currentState;
 
 	public GameObject sLight;
 
 	public Crowd crowd;
 
 	public Decor decorobject;
-
-	public float happinessChange;
 
 	DecorEnum decor;
 
@@ -46,26 +49,25 @@ public class Manager : MonoBehaviour {
 
 
 
-	private void Start() {
-		crowd.Happiness = 50;
+	private void Start() {	
+		
+		timeline.Reset();	
 		src = GetComponent<AudioSource>();
-		decor = DecorEnum.decor1;	
+
+		currentState = timeline.GetCurrentState();
+		timer = currentState.duration;
+		decor = DecorEnum.decor1;
+		crowd.Happiness = 100;
+	
+
 	}
 
 
 	private void Update() {
 
-		timer += Time.deltaTime;
-		
+		timer -= Time.deltaTime;
 		GetActualState();
-
-		if(timeline.GetCurrentState().CompareAll(actualState)){
-			crowd.Happiness += happinessChange * Time.deltaTime;
-		}
-
-		else{
-			crowd.Happiness -= happinessChange * Time.deltaTime;
-		}
+	
 
 		if(Input.GetKeyDown(KeyCode.Keypad1)){
 			decor = (DecorEnum)1;
@@ -84,7 +86,6 @@ public class Manager : MonoBehaviour {
 		decorobject.decor1.SetActive(false);
 		decorobject.decor2.SetActive(false);
 		decorobject.decor3.SetActive(false);
-		decorobject.decor4.SetActive(false);
 
 
 
@@ -140,8 +141,6 @@ public class Manager : MonoBehaviour {
 
 		}		
 		
-		
-		
 		if(Input.GetKeyDown(KeyCode.Keypad7)){
 			targetLightPos = positions[0].position;
 			actorInLight = 1;
@@ -160,13 +159,20 @@ public class Manager : MonoBehaviour {
 		Quaternion tRot = Quaternion.LookRotation(targetLightPos - sLight.transform.position);
 
 		sLight.transform.rotation = Quaternion.RotateTowards(sLight.transform.rotation,tRot,Time.deltaTime * 30f);
-	
 
-		GameState s = timeline.GetCurrentState();
+		if(timeline.UpdateTimeline()) 
+		{
+			if(!timeline.GetCurrentState().CompareAll(actualState))
+			{	
+				crowd.Happiness -= 33.33333f;
+				currentState = timeline.GetCurrentState();
+				timer = currentState.duration;
+			}
+		}
 
-		a1.targetLocation = new Vector2(positions[(int)s.actor1Position].position.x, positions[(int)s.actor1Position].position.z);
-		a2.targetLocation = new Vector2(positions[(int)s.actor2Position].position.x, positions[(int)s.actor2Position].position.z);
-		a3.targetLocation = new Vector2(positions[(int)s.actor3Position].position.x, positions[(int)s.actor3Position].position.z);
+		a1.targetLocation = new Vector2(positions[(int)currentState.actor1Position].position.x, positions[(int)currentState.actor1Position].position.z);
+		a2.targetLocation = new Vector2(positions[(int)currentState.actor2Position].position.x, positions[(int)currentState.actor2Position].position.z);
+		a3.targetLocation = new Vector2(positions[(int)currentState.actor3Position].position.x, positions[(int)currentState.actor3Position].position.z);
 
 		if(crowd.Happiness <= 0){
 

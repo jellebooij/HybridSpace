@@ -5,11 +5,8 @@ using UnityEngine;
 [CreateAssetMenu]
 public class TimeLine : ScriptableObject {
 
-	// Use this for initialization
 	public GameState[] states;
-
 	float t;
-
 	int currentIndex;
 
 	public void Reset(){
@@ -17,7 +14,7 @@ public class TimeLine : ScriptableObject {
 		currentIndex = 0;
 	}
 
-	public void UpdateTimeline() {
+	public bool UpdateTimeline() {
 
 		t += Time.deltaTime;
 
@@ -25,9 +22,10 @@ public class TimeLine : ScriptableObject {
 			if(states[currentIndex].duration <= t){
 				currentIndex++;
 				t = 0;
+				return true;
 			}
 		}
-		
+		return false;
 	}
 	public GameState GetCurrentState(){
 	
