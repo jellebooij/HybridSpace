@@ -453,7 +453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 100803186}
   m_Layer: 0
-  m_Name: Offstage
+  m_Name: OffstageRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -466,7 +466,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 100803185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.07, y: -2.05, z: 7.71}
+  m_LocalPosition: {x: 10.24, y: -2.05, z: 7.71}
   m_LocalScale: {x: 0.7550925, y: 0.72602, z: 1.1034777}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2090,6 +2090,34 @@ Transform:
   m_Children:
   - {fileID: 912736967}
   m_Father: {fileID: 1958190565}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &785067440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 785067441}
+  m_Layer: 0
+  m_Name: OffstageLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &785067441
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 785067440}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.9, y: -2.05, z: 7.71}
+  m_LocalScale: {x: 0.7550925, y: 0.72602, z: 1.1034777}
+  m_Children: []
+  m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &824129629
@@ -4806,8 +4834,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activatedMat: {fileID: 2100000, guid: 1b13153edf10aba49a5f51612c589191, type: 2}
   deactivatedMat: {fileID: 2100000, guid: da9e15a27eea14e4496b4a78db8626d5, type: 2}
-  actived: 0
   targetLocation: {x: 0, y: 0}
+  rotateSpeed: 200
 --- !u!136 &1481959687
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5664,8 +5692,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activatedMat: {fileID: 2100000, guid: 1b13153edf10aba49a5f51612c589191, type: 2}
   deactivatedMat: {fileID: 2100000, guid: 5ec800d3a82d86a45a901646c4a465e1, type: 2}
-  actived: 0
   targetLocation: {x: 0, y: 0}
+  rotateSpeed: 200
 --- !u!136 &1813781894
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6338,8 +6366,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activatedMat: {fileID: 2100000, guid: 1b13153edf10aba49a5f51612c589191, type: 2}
   deactivatedMat: {fileID: 2100000, guid: 047772ce4f0a6e848a3f8c98f1d8468c, type: 2}
-  actived: 0
   targetLocation: {x: 0, y: 0}
+  rotateSpeed: 200
 --- !u!136 &1993656045
 CapsuleCollider:
   m_ObjectHideFlags: 0

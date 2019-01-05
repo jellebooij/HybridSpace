@@ -16,6 +16,7 @@ public class Actor : MonoBehaviour {
 
 	public float rotateSpeed = 100.0f;
 
+
 	private void Start() {
 
 		rend = GetComponent<MeshRenderer>();
@@ -36,7 +37,6 @@ public class Actor : MonoBehaviour {
 
 
 		transform.rotation = Quaternion.RotateTowards(transform.rotation,targetRotation, rotateSpeed * Time.deltaTime);
-
 	}
 
 }
