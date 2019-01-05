@@ -14,40 +14,36 @@ MonoBehaviour:
   states:
   - duration: 15
     actor1InLight: 0
-    actor2InLight: 0
-    actor3InLight: 1
-    actor4InLight: 0
-    decor: 0
+    actor2InLight: 1
+    actor3InLight: 0
+    decor: 1
     music: 0
-    actor1Position: 0
+    actor1Position: 3
     actor2Position: 1
-    actor3Position: 2
+    actor3Position: 3
   - duration: 10
     actor1InLight: 0
     actor2InLight: 1
     actor3InLight: 0
-    actor4InLight: 0
-    decor: 0
+    decor: 1
     music: 0
-    actor1Position: 0
+    actor1Position: 2
     actor2Position: 1
-    actor3Position: 2
+    actor3Position: 3
   - duration: 5
     actor1InLight: 0
     actor2InLight: 1
     actor3InLight: 0
-    actor4InLight: 0
-    decor: 0
+    decor: 1
     music: 0
-    actor1Position: 0
-    actor2Position: 1
-    actor3Position: 2
+    actor1Position: 3
+    actor2Position: 3
+    actor3Position: 3
   - duration: 10
     actor1InLight: 1
     actor2InLight: 0
     actor3InLight: 0
-    actor4InLight: 0
-    decor: 0
+    decor: 1
     music: 0
     actor1Position: 0
     actor2Position: 1
@@ -56,49 +52,44 @@ MonoBehaviour:
     actor1InLight: 0
     actor2InLight: 1
     actor3InLight: 0
-    actor4InLight: 0
-    decor: 0
+    decor: 1
     music: 0
-    actor1Position: 0
+    actor1Position: 2
     actor2Position: 1
-    actor3Position: 2
+    actor3Position: 3
   - duration: 10
-    actor1InLight: 0
+    actor1InLight: 1
     actor2InLight: 0
-    actor3InLight: 1
-    actor4InLight: 0
-    decor: 0
+    actor3InLight: 0
+    decor: 1
     music: 0
     actor1Position: 0
-    actor2Position: 1
-    actor3Position: 2
+    actor2Position: 3
+    actor3Position: 1
   - duration: 15
-    actor1InLight: 1
-    actor2InLight: 0
-    actor3InLight: 0
-    actor4InLight: 0
-    decor: 0
-    music: 0
-    actor1Position: 0
-    actor2Position: 1
-    actor3Position: 2
-  - duration: 10
     actor1InLight: 0
     actor2InLight: 0
     actor3InLight: 1
-    actor4InLight: 0
-    decor: 0
+    decor: 1
     music: 0
-    actor1Position: 0
-    actor2Position: 1
+    actor1Position: 3
+    actor2Position: 2
+    actor3Position: 3
+  - duration: 10
+    actor1InLight: 1
+    actor2InLight: 0
+    actor3InLight: 0
+    decor: 1
+    music: 0
+    actor1Position: 1
+    actor2Position: 0
     actor3Position: 2
   - duration: 5
     actor1InLight: 0
     actor2InLight: 1
     actor3InLight: 0
-    actor4InLight: 0
-    decor: 0
+    decor: 1
     music: 0
-    actor1Position: 0
-    actor2Position: 1
-    actor3Position: 2
+    actor1Position: 3
+    actor2Position: 3
+    actor3Position: 3
