@@ -22,11 +22,6 @@ public class LightOrienter : MonoBehaviour {
 
 			float d = 1 - Vector3.Dot(( actors[i].transform.position - transform.position).normalized, transform.forward);
 			
-				if(d < spotRadius && d > 0)
-					actors[i].actived = true;
-				else
-					actors[i].actived = false;
-			
 		}
 
 	}
