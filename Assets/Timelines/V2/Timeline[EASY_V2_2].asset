@@ -9,14 +9,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74ccdaee62f31d548a99b01fc6d82555, type: 3}
-  m_Name: Timeline[easy_V2]
+  m_Name: Timeline[EASY_V2_2]
   m_EditorClassIdentifier: 
   states:
   - duration: 15
     actor1InLight: 0
     actor2InLight: 1
     actor3InLight: 0
-    decor: 1
+    decor: 0
     music: 0
     actor1Position: 3
     actor2Position: 1
@@ -25,43 +25,43 @@ MonoBehaviour:
     actor1InLight: 0
     actor2InLight: 1
     actor3InLight: 0
-    decor: 1
+    decor: 0
     music: 0
     actor1Position: 2
     actor2Position: 1
     actor3Position: 3
-  - duration: 5
+  - duration: 10
     actor1InLight: 0
     actor2InLight: 1
     actor3InLight: 0
-    decor: 1
+    decor: 0
     music: 0
     actor1Position: 3
     actor2Position: 3
     actor3Position: 3
-  - duration: 10
+  - duration: 15
     actor1InLight: 1
     actor2InLight: 0
     actor3InLight: 0
-    decor: 1
+    decor: 0
     music: 0
     actor1Position: 0
     actor2Position: 1
     actor3Position: 2
-  - duration: 5
+  - duration: 15
     actor1InLight: 0
-    actor2InLight: 1
-    actor3InLight: 0
-    decor: 1
+    actor2InLight: 0
+    actor3InLight: 1
+    decor: 0
     music: 0
     actor1Position: 2
     actor2Position: 1
     actor3Position: 3
-  - duration: 10
+  - duration: 15
     actor1InLight: 1
     actor2InLight: 0
     actor3InLight: 0
-    decor: 1
+    decor: 0
     music: 0
     actor1Position: 0
     actor2Position: 3
@@ -70,25 +70,25 @@ MonoBehaviour:
     actor1InLight: 0
     actor2InLight: 0
     actor3InLight: 1
-    decor: 1
+    decor: 0
     music: 0
     actor1Position: 3
     actor2Position: 2
     actor3Position: 3
-  - duration: 10
+  - duration: 15
     actor1InLight: 1
     actor2InLight: 0
     actor3InLight: 0
-    decor: 1
+    decor: 0
     music: 0
     actor1Position: 1
     actor2Position: 0
     actor3Position: 2
-  - duration: 5
+  - duration: 15
     actor1InLight: 0
     actor2InLight: 1
     actor3InLight: 0
-    decor: 1
+    decor: 0
     music: 0
     actor1Position: 3
     actor2Position: 3
