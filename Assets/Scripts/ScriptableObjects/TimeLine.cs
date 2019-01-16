@@ -27,6 +27,12 @@ public class TimeLine : ScriptableObject {
 		}
 		return false;
 	}
+
+	public bool nextState(){
+		currentIndex++;
+		t = 0;
+		return true;
+	}
 	public GameState GetCurrentState(){
 	
 		return states[currentIndex];

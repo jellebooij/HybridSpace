@@ -21,7 +21,7 @@ public class UiController : MonoBehaviour {
 	void UpdateUI(GameState state, GameState current){
 
 		timeUi.text = ((int)(manager.timer)).ToString();
-		crowdMeter.text = ((int)manager.crowd.Happiness).ToString();
+		crowdMeter.text = ((int)manager.score).ToString();
 
 	}
 }

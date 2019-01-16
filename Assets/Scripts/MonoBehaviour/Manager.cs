@@ -57,6 +57,9 @@ public class Manager : MonoBehaviour {
 
 
 	public Transform[] positions; 
+	public int score;
+
+
 
 	//SerialPort sp = new SerialPort("COM3", 9600);
 
@@ -82,6 +85,7 @@ public class Manager : MonoBehaviour {
 
 		timer -= Time.deltaTime;
 		GetActualState();
+		currentState = timeline.GetCurrentState();
 	
 
 		if(Input.GetKeyDown(KeyCode.Keypad1)){
@@ -197,7 +201,7 @@ public class Manager : MonoBehaviour {
 				crowd.Happiness -= 33.33333f;
 
 
-				currentState = timeline.GetCurrentState();
+				
 				timer = currentState.duration;
 		}
 
@@ -259,6 +263,14 @@ public class Manager : MonoBehaviour {
 				beenon3 = false;
 			}
 			
+		}
+
+
+		if(currentState.CompareAll(actualState)){
+			timeline.nextState();
+			score += (int)timer;
+			currentState = timeline.GetCurrentState();
+			timer = currentState.duration;
 		}
 
 
