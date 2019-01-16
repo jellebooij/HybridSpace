@@ -40,6 +40,10 @@ public class Manager : MonoBehaviour {
 
 	int latestSound;
 
+	public Cross cross1;
+	public Cross cross2;
+	public Cross cross3;
+
 
 	public GameObject light1;
 	public GameObject light2;
@@ -58,6 +62,7 @@ public class Manager : MonoBehaviour {
 
 	public Transform[] positions; 
 	public int score;
+	int straf;
 
 
 
@@ -199,9 +204,9 @@ public class Manager : MonoBehaviour {
 		{
 			if(!isCorrect)
 				crowd.Happiness -= 33.33333f;
+				straf += 1;
 
-
-				
+				currentState = timeline.GetCurrentState();
 				timer = currentState.duration;
 		}
 
@@ -267,10 +272,36 @@ public class Manager : MonoBehaviour {
 
 
 		if(currentState.CompareAll(actualState)){
+
 			timeline.nextState();
 			score += (int)timer;
 			currentState = timeline.GetCurrentState();
 			timer = currentState.duration;
+			
+		}
+
+
+		
+		if(straf == 0){
+			cross1.fail = false;
+			cross2.fail = false;
+			cross3.fail = false;
+		} 
+
+		if(straf == 1){
+			cross1.fail = true;
+			cross2.fail = false;
+			cross3.fail = false;
+		}
+		if(straf == 2){
+			cross1.fail = true;
+			cross2.fail = true;
+			cross3.fail = false;
+		}
+		if(straf == 3){
+			cross1.fail = true;
+			cross2.fail = true;
+			cross3.fail = true;
 		}
 
 
