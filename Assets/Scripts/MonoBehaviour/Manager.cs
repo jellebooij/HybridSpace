@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.IO.Ports;
 
 public class Manager : MonoBehaviour {
 
@@ -13,8 +14,6 @@ public class Manager : MonoBehaviour {
 
 	[HideInInspector]
 	public GameState currentState;
-
-	public GameObject sLight;
 
 	public Crowd crowd;
 
@@ -39,15 +38,27 @@ public class Manager : MonoBehaviour {
 	public float timer;
 	float timerOffset;
 
+	int latestSound;
 
-	Vector3 targetLightPos;
+
+	public GameObject light1;
+	public GameObject light2;
+
+	public GameObject light3;
 
 	AudioSource src;
+	public AudioSource src2;
+	public AudioSource src3;
+
+	bool beenon1,beenon2,beenon3;
+
+
+	public ArduinoInput inp;
 
 
 	public Transform[] positions; 
 
-
+	//SerialPort sp = new SerialPort("COM3", 9600);
 
 	private void Start() {	
 		
@@ -59,7 +70,10 @@ public class Manager : MonoBehaviour {
 		decor = DecorEnum.decor1;
 		crowd.Happiness = 100;
 		actorInLight = 2;
-	
+		audioIndex = 0;
+
+		//sp.Open();
+		//sp.ReadTimeout = 1;
 
 	}
 
@@ -100,66 +114,80 @@ public class Manager : MonoBehaviour {
 			decorobject.decor3.SetActive(true);
 		}
 
+		if(!inp.working){
+			if(Input.GetKeyDown(KeyCode.Keypad4) || inp.switch1){
+				if(audioIndex == 1){
+					src.Stop();
+					audioIndex = 0;
+				}
+				else{
+					src.Stop();
+					src.PlayOneShot(clip1);
+					audioIndex = 1;
+				}
+			}	
 
-		if(Input.GetKeyDown(KeyCode.Keypad4)){
-			if(audioIndex == 1){
+
+			if(Input.GetKeyDown(KeyCode.Keypad5)){
+				if(audioIndex == 2){
+					src.Stop();
+					audioIndex = 0;
+				}
+				else{
 				src.Stop();
-				audioIndex = 0;
+				src.PlayOneShot(clip2);
+				audioIndex = 2;
+
+				}
 			}
-			else{
+
+	
+
+			if(Input.GetKeyDown(KeyCode.Keypad6)){
+				if(audioIndex == 3){
+
+					src.Stop();
+					audioIndex = 0;
+				}
+
+				else{
 				src.Stop();
-				src.PlayOneShot(clip1);
-				audioIndex = 1;
-			}
-		}
+				src.PlayOneShot(clip3);
+				audioIndex = 3;
 
-		if(Input.GetKeyDown(KeyCode.Keypad5)){
-			if(audioIndex == 2){
-				src.Stop();
-				audioIndex = 0;
-			}
-			else{
-			src.Stop();
-			src.PlayOneShot(clip2);
-			audioIndex = 2;
+				}
 
 			}
-		}
-
-		if(Input.GetKeyDown(KeyCode.Keypad6)){
-			if(audioIndex == 3){
-
-				src.Stop();
-				audioIndex = 0;
-			}
-
-			else{
-			src.Stop();
-			src.PlayOneShot(clip3);
-			audioIndex = 3;
-
-			}
-
-		}		
+		}	
 		
 		if(Input.GetKeyDown(KeyCode.Keypad7)){
-			targetLightPos = positions[0].position;
 			actorInLight = 1;
 		}
 
 		if(Input.GetKeyDown(KeyCode.Keypad8)){
-			targetLightPos = positions[1].position;
 			actorInLight = 2;
 		}
+	
 
 		if(Input.GetKeyDown(KeyCode.Keypad9)){
-			targetLightPos = positions[2].position;
 			actorInLight = 3;
 		}
 
-		Quaternion tRot = Quaternion.LookRotation(targetLightPos - sLight.transform.position);
+		light1.SetActive(false);
+		light2.SetActive(false);
+		light3.SetActive(false);
 
-		sLight.transform.rotation = Quaternion.RotateTowards(sLight.transform.rotation,tRot,Time.deltaTime * 30f);
+		if(actorInLight == 1){
+			light1.SetActive(true);
+		}
+		if(actorInLight == 2){
+			light2.SetActive(true);
+		}
+		if(actorInLight == 3){
+			light3.SetActive(true);
+		}
+	
+
 
 		bool isCorrect = timeline.GetCurrentState().CompareAll(actualState);
 
@@ -173,9 +201,9 @@ public class Manager : MonoBehaviour {
 				timer = currentState.duration;
 		}
 
-		a1.targetLocation = new Vector2(positions[(int)currentState.actor1Position].position.x, positions[(int)currentState.actor1Position].position.z);
-		a2.targetLocation = new Vector2(positions[(int)currentState.actor2Position].position.x, positions[(int)currentState.actor2Position].position.z);
-		a3.targetLocation = new Vector2(positions[(int)currentState.actor3Position].position.x, positions[(int)currentState.actor3Position].position.z);
+		a1.targetLocation = new Vector2(positions[(int)currentState.actor1Position].position.x, positions[(int)currentState.actor1Position].position.y);
+		a2.targetLocation = new Vector2(positions[(int)currentState.actor2Position].position.x, positions[(int)currentState.actor2Position].position.y);
+		a3.targetLocation = new Vector2(positions[(int)currentState.actor3Position].position.x, positions[(int)currentState.actor3Position].position.y);
 
 		if(crowd.Happiness <= 0){
 
@@ -184,6 +212,57 @@ public class Manager : MonoBehaviour {
 			timeline.Reset();
 
 		}
+
+		if(inp.working){
+			decor = (DecorEnum)(inp.row1 - 1);
+			actorInLight = inp.row2;
+
+			if(inp.switch3 && !beenon1){
+
+					src.PlayOneShot(clip1);
+					beenon1 = true;
+
+			}
+
+			if(inp.switch2 && !beenon2){
+
+					src2.PlayOneShot(clip2);
+					beenon2 = true;
+
+			}
+
+			if(inp.switch1 && !beenon3){
+				
+					src3.PlayOneShot(clip3);
+					beenon3 = true;
+
+			}
+
+
+
+			if(!inp.switch3){
+				src.Stop();
+				audioIndex = 0;
+				beenon1 = false;
+
+
+			}
+			if(!inp.switch2){
+				src2.Stop();
+				audioIndex = 0;
+				beenon2 = false;
+
+			}
+			if(!inp.switch1){
+				src3.Stop();
+				audioIndex = 0;
+				beenon3 = false;
+			}
+			
+		}
+
+
+
 	}
 
 

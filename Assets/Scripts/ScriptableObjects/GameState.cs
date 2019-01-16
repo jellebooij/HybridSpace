@@ -28,7 +28,7 @@ public struct GameState{
 
 	public bool CompareActors(GameState other){
 		if(other.actor1InLight == actor1InLight && other.actor2InLight == actor2InLight && other.actor3InLight == actor3InLight){
-			Debug.Log("act");
+			//Debug.Log("act");
 			return true;
 		}
 		return false;
@@ -36,7 +36,7 @@ public struct GameState{
 
 	public bool CompareDecor(GameState other){
 		if(decor == other.decor){
-			Debug.Log("dec");
+			//Debug.Log("dec");
 			return true;
 		}
 		return false;
@@ -44,7 +44,7 @@ public struct GameState{
 
 	public bool CompareMusic(GameState other){
 		if(music == other.music){
-			Debug.Log("music");
+			//Debug.Log("music");
 			return true;
 		}
 		return false;
