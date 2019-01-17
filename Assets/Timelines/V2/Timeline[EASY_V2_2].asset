@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   states:
   - duration: 15
-    actor1InLight: 0
-    actor2InLight: 1
+    actor1InLight: 1
+    actor2InLight: 0
     actor3InLight: 0
     decor: 0
     music: 0
