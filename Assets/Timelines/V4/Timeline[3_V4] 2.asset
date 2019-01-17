@@ -22,7 +22,7 @@ MonoBehaviour:
     actor1Position: 3
     actor2Position: 3
     actor3Position: 3
-  - duration: 30
+  - duration: 35
     actor1InLight: 0
     actor2InLight: 0
     actor3InLight: 1
