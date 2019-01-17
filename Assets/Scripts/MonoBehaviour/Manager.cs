@@ -65,6 +65,8 @@ public class Manager : MonoBehaviour {
 	int straf;
 
 
+	public bool deathState;
+
 
 	//SerialPort sp = new SerialPort("COM3", 9600);
 
@@ -87,6 +89,9 @@ public class Manager : MonoBehaviour {
 
 
 	private void Update() {
+
+
+		if(!deathState){
 
 		timer -= Time.deltaTime;
 		GetActualState();
@@ -216,11 +221,15 @@ public class Manager : MonoBehaviour {
 
 		if(crowd.Happiness <= 0){
 
-			Scene scene = SceneManager.GetActiveScene(); 
-			SceneManager.LoadScene(scene.name);
-			timeline.Reset();
+
+			deathState = true;
+			
+			
+			
 
 		}
+
+
 
 		if(inp.working){
 			decor = (DecorEnum)(inp.row1 - 1);
@@ -277,7 +286,7 @@ public class Manager : MonoBehaviour {
 			score += (int)timer;
 			currentState = timeline.GetCurrentState();
 			timer = currentState.duration;
-			
+
 		}
 
 
@@ -302,6 +311,17 @@ public class Manager : MonoBehaviour {
 			cross1.fail = true;
 			cross2.fail = true;
 			cross3.fail = true;
+		}
+		}
+
+
+		if(deathState && Input.GetKeyDown("space")){
+
+			deathState = false;
+			Scene scene = SceneManager.GetActiveScene(); 
+			SceneManager.LoadScene(scene.name);
+			timeline.Reset();
+
 		}
 
 

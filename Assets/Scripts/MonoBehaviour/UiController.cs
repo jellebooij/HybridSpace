@@ -7,6 +7,10 @@ public class UiController : MonoBehaviour {
 	public Text timeUi;
 	public Text crowdMeter;
 
+	public Text finalScore;
+
+	public GameObject deathScreen;
+
 	public Image actorsActivation;
 	public Image decorActivation;
 	public Image musicActivation;
@@ -22,6 +26,18 @@ public class UiController : MonoBehaviour {
 
 		timeUi.text = ((int)(manager.timer)).ToString();
 		crowdMeter.text = ((int)manager.score).ToString();
+		finalScore.text = "Score: " + ((int)manager.score).ToString();
+
+
+		if(manager.deathState){
+			deathScreen.SetActive(true);
+			finalScore.gameObject.SetActive(true);
+
+		}
+		else{
+			deathScreen.SetActive(false);
+			finalScore.gameObject.SetActive(false);
+		}
 
 	}
 }
